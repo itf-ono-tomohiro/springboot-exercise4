@@ -1,0 +1,16 @@
+# JDBCの接続設定
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/moviedb?characterEncoding=UTF-8
+    username: root
+    password: itfpass
+    # DBCP2の設定
+    dbcp2:
+      initial-size: 1
+      max-idle: 3
+      min-idle: 1
+
+# mybatisの設定
+mybatis:
+  mapper-locations: classpath:com/example/demo3/repository/mybatis/*.xml
